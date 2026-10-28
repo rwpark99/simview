@@ -1,5 +1,5 @@
 import fs from 'node:fs'; import zlib from 'node:zlib';
-const files = {'/index.html':'text/html; charset=utf-8','/app.js':'application/javascript; charset=utf-8','/sw.js':'application/javascript; charset=utf-8','/manifest.webmanifest':'application/manifest+json','/icon-192.png':'image/png','/icon-512.png':'image/png','/version.json':'application/json','/pdf.min.mjs':'text/javascript; charset=utf-8','/pdf.worker.min.mjs':'text/javascript; charset=utf-8'};
+const files = {'/index.html':'text/html; charset=utf-8','/app.js':'application/javascript; charset=utf-8','/sw.js':'application/javascript; charset=utf-8','/manifest.webmanifest':'application/manifest+json','/icon-192.png':'image/png','/icon-512.png':'image/png','/version.json':'application/json','/THIRD_PARTY_NOTICES.txt':'text/plain; charset=utf-8','/pdf.min.mjs':'text/javascript; charset=utf-8','/pdf.worker.min.mjs':'text/javascript; charset=utf-8'};
 const F = Object.fromEntries(Object.entries(files).map(([p,ct])=>[p,[ct,zlib.gzipSync(fs.readFileSync('dist'+p),{level:9}).toString('base64')]]));
 const worker = `const F=${JSON.stringify(F)};const C={};
 export default{async fetch(req){const u=new URL(req.url);let p=u.pathname;if(p==='/'||p==='')p='/index.html';

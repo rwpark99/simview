@@ -1,5 +1,5 @@
 {
-  "name": "hwpview-pwa",
+  "name": "simview",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "@noble/hashes": "^2.4.0",
