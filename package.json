@@ -1,0 +1,29 @@
+{
+  "name": "hwpview-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "buffer": "^6.0.3",
+    "cfb": "^1.2.2",
+    "docx-preview": "^0.4.1",
+    "esbuild": "^0.28.2",
+    "jszip": "^3.10.2",
+    "kordoc": "file:../kordoc/node_modules/kordoc",
+    "marked": "^18.1.1",
+    "pako": "^3.0.2",
+    "pdfjs-dist": "^4.10.38",
+    "process": "^0.11.10"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.43.1"
+  }
+}
