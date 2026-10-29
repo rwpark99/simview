@@ -258,7 +258,8 @@ addEventListener('DOMContentLoaded', async () => {
     dlg.onclick = e => { if (e.target === dlg) closeDlg(); };
   };
   // one place that decides what "back" means
-  const onBack = () => { if (window.__helpOpen && window.__helpOpen()) { window.__helpClose(); return; }
+  const onBack = () => { if (window.__licOpen && window.__licOpen()) { window.__licClose(); return; }
+    if (window.__helpOpen && window.__helpOpen()) { window.__helpClose(); return; }
     if (dlg) return closeDlg();
     if (isOpen()) return B.classList.remove('tocopen');
     if (!$('#page').hidden) ask('파일을 닫을까요?', '닫기', () => { if (!window.__zip.back()) goHome(); });

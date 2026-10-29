@@ -1,4 +1,4 @@
-const V = 'simview-v1.0.2'; const ASSETS = ['./', './index.html', './app.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './pdf.min.mjs', './pdf.worker.min.mjs'];
+const V = 'simview-v1.0.3'; const ASSETS = ['./', './index.html', './app.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './pdf.min.mjs', './pdf.worker.min.mjs'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(ASSETS.map(u => new Request(u, { cache: 'reload' }))))); self.skipWaiting(); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V && k !== 'simview-share').map(k => caches.delete(k))))); self.clients.claim(); });
 self.addEventListener('fetch', e => {
