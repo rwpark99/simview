@@ -1,7 +1,7 @@
-# 심뷰 1.0
+# 심뷰 (SimView) — 저장소 이전 안내
 
-HWP/HWPX/PDF/DOC/DOCX/ZIP 파일을 폰에서만 열어 보는 웹 앱(PWA). 파일은 서버로 보내지 않습니다.
+심뷰 소스는 HWP 뷰어와 하나의 코드베이스로 합쳐져 아래로 옮겨졌습니다.
 
-- 배포 주소: https://simview.rwpark-hwp.workers.dev/
-- 빌드: `npm install && node pack.mjs && node mkworker.mjs` (Cloudflare Worker 스크립트 생성)
-- 소스: `src/`, 빌드 결과: `dist/`
+👉 https://github.com/rwpark99/hwp-viewer
+
+빌드: `node build-all.mjs simview` (설정: `apps/simview.json`)
